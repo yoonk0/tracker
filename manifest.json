@@ -1,25 +1,29 @@
 {
   "manifest_version": 2,
 
-  "name": "TimeWatch",
-  "description": "This extension will track time spent on designated website",
+  "name": "NoShame NoGain",
+  "description": "This extension will track time spent on designated website and post on facebook when failed to meet the goal",
   "version": "1.0",
 
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
-    "default_title": "Click here!"
+    "default_title": "NoShame NoGain"
   },
 
    "background": {
     "scripts":["js/background.js",
-              "js/jquery-2.1.4.min.js"
+              "js/jquery-2.1.4.min.js",
+              "js/tracker.js"
     ]
-
   },
 
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "storage"
   ]
 
  

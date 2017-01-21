@@ -8,11 +8,11 @@ h1 {
 	text-align: center;
 }
 
-#url, #slider {
+#url, input:range {
 	width: 200px;
 }
 
-#timeLimit {
+#dayTimeLimit, #sessionTimeLimit {
 	text-align: center;
 }
 

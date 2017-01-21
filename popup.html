@@ -6,25 +6,22 @@
  -->
 <html>
   <head>
-    <title>TimeWatch</title>
+    <title>NoShame NoGain</title>
     <link rel = "stylesheet" href = "css/styles.css"> 
     
   </head>
   <body>
-    <h1>TimeWatch</h1>
+    <h1>NoShame NoGain</h1>
     <div class = "container" id = "goalForm">
       URL: &nbsp;<input type = "text" id = "url" >
       <br><br><hr><br>
-      Time Limit: &nbsp;<input type = "range" id = "slider" min = "0" max = "180" value = "90" step ="30"
-      onchange= "displayTime"/>
-      <div id = "timeLimit">90 minutes</div>
+      Day Time Limit: &nbsp;<input type = "range" class = "slider" id = "dayTime" min = "0" max = "180" value = "90" step ="30"/>
+      <div id = "dayTimeLimit">90 minutes</div>
+      Session Time Limit: &nbsp;<input type = "range" class = "slider" id = "sessionTime" min = "0" max = "180" value = "90" step ="30"/>
+      <div id = "sessionTimeLimit">90 minutes</div>
       <br><br><hr><br>
       <input type = "checkbox" id = "self" value = "self"> Alert myself <br>
-      <input type = "checkbox" id = "friend" value = "friend"> Alert friends</br>
-      <div id = "friendlist">
-         <input type = "text" id = "contact1">
-         <input type = "text" id = "contact2">
-      </div>
+      <input type = "checkbox" id = "friend" value = "friend"> Post on Facebook</br>
       </br>
       <button id = "submit">Set Goal</button>
       <span id = "message"></span>
@@ -36,11 +33,7 @@
       Time Limit: &nbsp;<span id = "goalTime"></span>
       <br><br><hr><br>
       <input type="checkbox" disabled="disabled" id = "goalSelf"> Alert myself <br>
-      <input type="checkbox" disabled="disabled" id = "goalFriend"> Alert friends</br>
-      <div id = "friendlist">
-         <div id = "goalContact1">
-         <div id = "goalContact2">
-      </div>
+      <input type="checkbox" disabled="disabled" id = "goalFriend"> Post on Facebook</br>
       </br>
       <button id = "Edit">Edit</button>
       <button id = "new">New Goal</button>

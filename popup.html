@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>TimeWatch</title>
+    <link rel = "stylesheet" href = "css/styles.css"> 
+    
+  </head>
+  <body>
+    <h1>TimeWatch</h1>
+    <div class = "container" id = "goalForm">
+      URL: &nbsp;<input type = "text" id = "url" >
+      <br><br><hr><br>
+      Time Limit: &nbsp;<input type = "range" id = "slider" min = "0" max = "180" value = "90" step ="30"
+      onchange= "displayTime"/>
+      <div id = "timeLimit">90 minutes</div>
+      <br><br><hr><br>
+      <input type = "checkbox" id = "self" value = "self"> Alert myself <br>
+      <input type = "checkbox" id = "friend" value = "friend"> Alert friends</br>
+      <div id = "friendlist">
+         <input type = "text" id = "contact1">
+         <input type = "text" id = "contact2">
+      </div>
+      </br>
+      <button id = "submit">Set Goal</button>
+      <span id = "message"></span>
+    </div>
+
+    <div class = "container" id = "goalSet">
+      URL: &nbsp;<span id = "goalUrl"></span>
+      <br><br><hr><br>
+      Time Limit: &nbsp;<span id = "goalTime"></span>
+      <br><br><hr><br>
+      <input type="checkbox" disabled="disabled" id = "goalSelf"> Alert myself <br>
+      <input type="checkbox" disabled="disabled" id = "goalFriend"> Alert friends</br>
+      <div id = "friendlist">
+         <div id = "goalContact1">
+         <div id = "goalContact2">
+      </div>
+      </br>
+      <button id = "Edit">Edit</button>
+      <button id = "new">New Goal</button>
+    </div>
+
+
+
+    <script src ="js/jquery-2.1.4.min.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>
+
